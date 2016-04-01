@@ -47,7 +47,7 @@ var EventHero = ((new function() {
      * @param handlerParams {[HandlerParams1, HandlerParams2, HandlerParams3 ...]}
      * @constructor
      */
-    self.reateEmitter = function() {
+    self.createEmitter = function() {
         var Emitter = function(handler, handlerParams) {
             this.handlerParams  = handlerParams || [];
             this.handler        = handler;
