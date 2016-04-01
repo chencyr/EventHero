@@ -1,65 +1,173 @@
 <!DOCTYPE html>
 <html lang="en" id="ng-app" data-framework="angularjs">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-touch-fullscreen" content="YES" />
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+		<meta name="apple-touch-fullscreen" content="YES" />
 
-    <title>Develop Lab</title>
+		<title>EventHero Lab</title>
 
-    <link rel="stylesheet" href="/common/css/bootstrap-3.2.0.min.css">
-    <link rel="stylesheet" href="/common/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/common/css/font-awesome-4.2.0.min.css">
-    <script src="/common/libs/jquery-1.10.1.min.js"></script>
-    <script src="/common/libs/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/common/css/bootstrap-3.2.0.min.css">
+		<link rel="stylesheet" href="/common/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/common/css/font-awesome-4.2.0.min.css">
+		<script src="/common/libs/jquery-1.10.1.min.js"></script>
+		<script src="/common/libs/bootstrap.min.js"></script>
+		<script src="/src/eventhero-0.0.1.js"></script>
+		
+	</head>
+	<body role="document">
 
-</head>
-<body role="document">
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">EventHero Lab</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="multi-async"><a href="index.html">multiple-async</a></li>
 
-<!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Developer Lab</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <!--<li class="CreateUser"><a href="index.html">Home</a></li>-->
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
 
-<div class="container theme-showcase" role="main">
-    <div class="row" style="padding-top: 80px;">
-        <div class="col-md-12">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Enter your develop lab</h3>
-                </div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item text-center"><a href="/event-hero/index.html">Demo Event Hero</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+	<div class="container theme-showcase" role="main">
+		<div class="row" style="padding-top: 80px;">
 
-    </div>
-</div> <!-- /container -->
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"></h3>
+				</div>
+				<div class="panel-body">
+					Handling function async1, async2, async3 by handler( e1, e2, e3, e4, e5 )
+				</div>
+			</div>
 
-<script>
-   // Do nothings
-</script>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Enter your async1 function params</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="f1-param1">param1: </label>
+							<input type="text" class="form-control" id="f1-param1" placeholder="10">
+						</div>
+						<div class="form-group">
+							<label for="f1-param2">param2: </label>
+							<input type="text" class="form-control" id="f1-param2" placeholder="20">
+						</div>
+						<button type="button" class="btn btn-default" id="f1-exec"> Execute and handler(e3, e4) </button>
+					</form>
+				</div>
+			</div>
 
-</body>
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Enter your async2 function params</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="f2-param1">param1: </label>
+							<input type="text" class="form-control" id="f2-param1" placeholder="10">
+						</div>
+						<button type="button" class="btn btn-default" id="f2-exec"> Execute and handler(e5)</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Enter your async3 function params</h3>
+				</div>
+				<div class="panel-body">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="f3-param1">param1: </label>
+							<input type="text" class="form-control" id="f3-param1" placeholder="10">
+						</div>
+						<div class="form-group">
+							<label for="f3-param2">param2: </label>
+							<input type="text" class="form-control" id="f3-param2" placeholder="20">
+						</div>
+						<button type="button" class="btn btn-default" id="f3-exec"> Execute and handler(e1, e2)</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title">Execute records</h3>
+				</div>
+				<div class="panel-body" id="exec-result">
+
+				</div>
+			</div>
+
+		</div>
+	</div> <!-- /container -->
+
+	<script>
+
+		var handler = EventHero.create("My-event", function(e1, e2, e3, e4, e5) {
+			records('My Event -> hanlder(e1=' + e1 + ', e2=' + e2 + ', e3=' + e3 + ', e4=' + e4 + ', e5=' + e5 + ')');
+		});
+
+		handler.onApplyOrigin = function(allParams) {
+			return false;
+		};
+
+		var params = handler.getParams();
+
+		function async1(p1, p2, callback) {
+			callback(p1, p2);
+		}
+
+		function async2(p1, callback) {
+			callback(p1);
+		}
+
+		function async3(p1, p2, callback) {
+			callback(p1, p2);
+		}
+
+		function records(method) {
+			$("#exec-result").append("<div>" + method + " </div>");
+		}
+
+		$("#f1-exec").click(function(e) {
+			var p1 = $("#f1-param1").val();
+			var p2 = $("#f1-param2").val();
+			records('async1 -> hanlder(e3=' + p1 + ', e4=' + p2 + ')');
+			async1(p1, p2, handler.listen(params.e3, params.e4));
+		});
+
+		$("#f2-exec").click(function(e) {
+			var p1 = $("#f2-param1").val();
+			records('async2 -> hanlder(e5=' + p1 + ')');
+			async2(p1, handler.listen(params.e5));
+		});
+
+		$("#f3-exec").click(function(e) {
+			var p1 = $("#f3-param1").val();
+			var p2 = $("#f3-param2").val();
+			records('async3 -> hanlder(e1=' + p1 + ', e2=' + p2 + ')');
+			async3(p1, p2, handler.listen(params.e1, params.e2));
+		});
+
+
+	</script>
+
+	</body>
 </html>
