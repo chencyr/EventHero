@@ -96,7 +96,7 @@ var EventHero = ((new function() {
      */
     GeneralEmitter.prototype.onListenerReceived = function(params, args) {
         for(var i in args) {
-            if(params[i]) {
+            if(args[i]) {
                 params[i].setValue(args[i]);
             }
         }
@@ -271,6 +271,6 @@ var EventHero = ((new function() {
 
 }()));
 
-if(module) {
+if(typeof(module) != 'undefined') {
     module.exports = EventHero;
 }

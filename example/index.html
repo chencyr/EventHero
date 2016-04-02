@@ -120,13 +120,9 @@
 
 	<script>
 
-		var handler = EventHero.create("My-event", function(e1, e2, e3, e4, e5) {
-			records('My Event -> hanlder(e1=' + e1 + ', e2=' + e2 + ', e3=' + e3 + ', e4=' + e4 + ', e5=' + e5 + ')');
+		var handler = EventHero.create(function(e1, e2, e3, e4, e5) {
+			records('hanlder(e1=' + e1 + ', e2=' + e2 + ', e3=' + e3 + ', e4=' + e4 + ', e5=' + e5 + ')');
 		});
-
-		handler.onApplyOrigin = function(allParams) {
-			return false;
-		};
 
 		var params = handler.getParams();
 
