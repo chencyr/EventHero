@@ -235,9 +235,29 @@ var EventHero = ((new function() {
      * @param name {string} name of handler.
      * @param define {function} Original handler function define.
      */
-    self.create = function(name, define) {
-        var handler = new Handler(define);
-        self.handlers[name] = handler;
+    self.create = function(define, customerSettings) {
+        customerSettings = customerSettings || {};
+        var handler;
+        var emitter;
+
+        if(customerSettings.emitter) {
+            emitter = self.emitter(customerSettings.emitter);
+        }
+
+        handler = new Handler(define, emitter);
+
+        if(customerSettings.name) {
+            self.handlers[customerSettings.name] = handler;
+        }
+
+        if(customerSettings.onApplyOrigin) {
+            handler.onApplyOrigin = customerSettings.onApplyOrigin;
+        }
+
+        if(customerSettings.onReceivedParams) {
+            handler.onReceivedParams = customerSettings.onReceivedParams;
+        }
+
         return handler;
     };
 
@@ -250,3 +270,7 @@ var EventHero = ((new function() {
     };
 
 }()));
+
+if(module) {
+    module.exports = EventHero;
+}

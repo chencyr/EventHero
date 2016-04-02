@@ -1,2 +1,4 @@
 # EventHero
-Advance event handler of javascript.
+Advanced event handler tool for javascript.
+
+
