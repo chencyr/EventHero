@@ -3,7 +3,7 @@ Advanced event handler tool for javascript.
 
 # Install
 
-## For browser:
+## For browser
 ```
 <script src="/src/eventhero.js"></script>
 ```
@@ -53,7 +53,7 @@ setTimeout(function() {
 
 ## EventHero
 
-### create(define<function>[, customerSettings<object>]) :: <Handler>
+### create(define<function>[, customerSettings<object>]) :: Handler
 
     define: The original handle function.
     customerSettings: For customer requirements.
