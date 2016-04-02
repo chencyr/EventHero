@@ -55,8 +55,10 @@ setTimeout(function() {
 
 ### create(define<function>[, customerSettings<object>]) :: Handler
 
-    define: The original handle function.
-    customerSettings: For customer requirements.
+    define
+        The original handle function.
+    customerSettings
+        For customer requirements.
 
 ### customerSettings.emitter<Emitter>
 
