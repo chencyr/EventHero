@@ -55,10 +55,22 @@ setTimeout(function() {
 
 ### create(define<function>[, customerSettings<object>]) :: Handler
 
-    define
-        The original handle function.
-    customerSettings
-        For customer requirements.
+```
+    var define = function(e1, e2, e3, e4, e5) {
+        // Some process.
+    };
+
+    var customerSettings = { ... };
+
+    /**
+     * Factory method for event handler object.
+     * @param name {string} name of handler.
+     * @param define {function} Original handler function define.
+     * @return {Handler}
+     */
+    var handler = EventHero.create(define, customerSettings);
+
+```
 
 ### customerSettings.emitter<Emitter>
 
