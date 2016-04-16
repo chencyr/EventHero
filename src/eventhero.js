@@ -96,7 +96,7 @@ var EventHero = ((new function() {
      */
     GeneralEmitter.prototype.onListenerReceived = function(params, args) {
         for(var i in args) {
-            if(args[i]) {
+            if(args[i] && params[i]) {
                 params[i].setValue(args[i]);
             }
         }
